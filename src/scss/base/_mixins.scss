@@ -36,4 +36,14 @@
 @mixin title {
   font-size: 50px;
   font-family: 'FiraSans';
+
+  @media (max-width: 767px) {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
 }

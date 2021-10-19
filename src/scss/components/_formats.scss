@@ -1,0 +1,143 @@
+.formats {
+  min-height: 1069px;
+  @include bg;
+  background-image: url('/src/img/bgs/formats-bg.jpg');
+  padding-top: 85px;
+  padding-bottom: 134px;
+
+  @media (max-width: 1150px) {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
+}
+
+.formats__title {
+  @include title;
+  color: $blue;
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.formats__text {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 135px;
+
+  @media (max-width: 920px) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
+}
+
+.formats__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+
+  @media (max-width: 1150px) {
+    gap: 180px;
+  }
+}
+
+.formats__item {
+  @include max-width(567px);
+  min-height: 558px;
+  background-color: white;
+  padding-left: 62px;
+  padding-right: 61px;
+  padding-top: 130px;
+  padding-bottom: 70px;
+  position: relative;
+
+  @media (max-width: 575px) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  &:nth-child(1) .formats__item-title::before {
+    content: url('/src/img/gallery/formats/1.png');
+  }
+  &:nth-child(2) .formats__item-title::before {
+    content: url('/src/img/gallery/formats/2.png');
+  }
+}
+
+.formats__item-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 7px solid #00a99d;
+  margin-bottom: 25px;
+  position: relative;
+
+  @media (max-width: 575px) {
+    font-size: 22px;
+  }
+
+  &::before {
+    top: -247px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+}
+
+.formats__item-list {
+  @include reset-list;
+}
+
+.formats__item-item {
+  margin-bottom: 20px;
+  padding-left: 30px;
+  position: relative;
+  font-size: 18px;
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: url('/src/img/icons/check.png');
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.formats__caption {
+  height: 93px;
+  line-height: 93px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.53);
+  font-weight: bold;
+  font-size: 120px;
+  position: absolute;
+  left: -282px;
+  bottom: 54px;
+  margin-bottom: 0px;
+  transform: rotateZ(270deg);
+
+  @media (max-width: 1330px) {
+    display: none;
+  }
+}

@@ -1,0 +1,152 @@
+.gains {
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+  @media (max-width: 1150px) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+
+.gains__title {
+  @media (max-width: 745px) {
+    margin-bottom: 30px;
+  }
+
+  @include title;
+  margin-bottom: 50px;
+
+  span {
+    color: $blue;
+  }
+}
+
+.gains__text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 95px;
+  @include max-width(1060px);
+
+  @media (max-width: 1240px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.gains__preview-box {
+  width: 100%;
+  position: relative;
+  margin-bottom: 124px;
+
+  @media (max-width: 1240px) {
+    margin-bottom: 40px;
+  }
+}
+
+.gains__preview-bg {
+  width: 1235px;
+  height: 725px;
+  border-radius: 14px;
+  border: solid 1px #00a99d;
+  position: absolute;
+  z-index: -1;
+  @include central-align;
+
+  @media (max-width: 1240px) {
+    display: none;
+  }
+}
+
+.gains__preview-img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.gains__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: url('/src/img/gains-flowers.png');
+    right: -387px;
+    top: 172px;
+    z-index: -1;
+
+    @media (max-width: 1150px) {
+      content: none;
+    }
+  }
+}
+
+.gains__item {
+  @include max-width(286px);
+
+  @media (max-width: 1150px) {
+    margin-bottom: 20px;
+  }
+}
+
+.gains__item-img {
+  width: 100%;
+}
+
+.gains__item-text {
+  padding-top: 42px;
+  padding-left: 17px;
+  padding-right: 17px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 0;
+  position: relative;
+
+  &::before {
+    width: 139px;
+    height: 6px;
+    background-color: #00a99d;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+  }
+}
+
+.gains__caption {
+  position: absolute;
+  font-size: 120px;
+  color: rgba(199, 178, 153, 0.2);
+  font-weight: bold;
+  left: -18px;
+  bottom: -100px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  height: 90px;
+  line-height: 90px;
+  margin-top: 0;
+
+  @media (max-width: 1150px) {
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

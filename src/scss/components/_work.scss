@@ -1,0 +1,173 @@
+.work {
+  min-height: 1084px;
+  @include bg;
+  background-image: url('/src/img/bgs/work-bg.png');
+  padding-top: 380px;
+  position: relative;
+  z-index: 1;
+  top: -100px;
+  margin-bottom: -100px;
+
+  @media (max-width: 575px) {
+    top: 0;
+    margin-bottom: 0;
+    padding-top: 30px;
+    background-color: #f4f0eb;
+    background-image: none;
+    min-height: auto;
+  }
+}
+
+.work__content {
+  @include max-width(694px);
+  margin-left: auto;
+
+  @media (max-width: 1150px) {
+    max-width: 100%;
+  }
+}
+
+.work__title {
+  @include title;
+  @include max-width(657px);
+  margin-bottom: 65px;
+  position: relative;
+
+  @media (max-width: 1150px) {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  &::after {
+    position: absolute;
+    left: -94px;
+    top: -618px;
+    content: url('/src/img/market-journal.png');
+
+    @media (max-width: 1150px) {
+      left: 346px;
+    }
+
+    @media (max-width: 900px) {
+      top: -670px;
+    }
+
+    @media (max-width: 575px) {
+      content: none;
+    }
+  }
+
+  span {
+    color: $blue;
+  }
+}
+
+.work__form {
+  @include max-width(694px);
+  background-color: white;
+  padding-top: 65px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+  min-height: 469px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 575px) {
+    padding-top: 31px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    min-height: auto;
+  }
+
+  &::before {
+    content: url('/src/img/work-owner.png');
+    position: absolute;
+    left: -888px;
+    top: -188px;
+    z-index: -1;
+
+    @media (max-width: 1150px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/work-map.png');
+    position: absolute;
+    z-index: -2;
+    left: -833px;
+    top: -582px;
+
+    @media (max-width: 575px) {
+      content: none;
+    }
+  }
+}
+
+.work__form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 65px;
+  text-align: center;
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+.work__input-box {
+  width: 100%;
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 60px;
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      content: url('/src/img/icons/form/#{$i}.png');
+    }
+  }
+}
+
+.work__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px dotted #b3b3b3;
+  color: black;
+  font-size: 16px;
+  padding-bottom: 6px;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    border-bottom: 1px solid black;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #808080;
+  }
+
+  &::-moz-placeholder {
+    color: #808080;
+  }
+
+  &:-ms-input-placeholder {
+    color: #808080;
+  }
+
+  &:-moz-placeholder {
+    color: #808080;
+  }
+}

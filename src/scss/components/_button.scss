@@ -135,6 +135,54 @@
       }
     }
   }
+
+  &_work {
+    position: absolute;
+    max-width: 413px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -45.5px;
+
+    button {
+      font-size: 26px;
+
+      @media (max-width: 575px) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &_options {
+    position: absolute;
+    max-width: 381px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -45.5px;
+
+    button {
+      font-size: 20px;
+
+      @media (max-width: 575px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &_modal-form {
+    max-width: 319px;
+    margin-top: 55px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    button {
+      font-size: 20px;
+
+      @media (max-width: 575px) {
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 .button__bg {

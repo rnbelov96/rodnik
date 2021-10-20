@@ -1,0 +1,86 @@
+.modal-form{
+  @include max-width(559px);
+  background-color: #f4f0eb;
+  padding-top: 60px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-bottom: 30px;
+  min-height: 537px;
+
+  @media (max-width: 575px) {
+    padding-top: 31px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    min-height: auto;
+  }
+}
+
+.modal-form__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 60px;
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
+
+.modal-form__input-box {
+  width: 100%;
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+
+  @media (max-width: 575px) {
+    margin-bottom: 35px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      content: url('/src/img/icons/modal-form/#{$i}.png');
+    }
+  }
+}
+
+.modal-form__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px dotted #b3b3b3;
+  color: black;
+  font-size: 16px;
+  padding-bottom: 6px;
+  outline: none;
+  background-color: transparent;
+
+  &:focus,
+  &:hover {
+    border-bottom: 1px solid black;
+  }
+
+  &::-webkit-input-placeholder {
+    color: black;
+  }
+
+  &::-moz-placeholder {
+    color: black;
+  }
+
+  &:-ms-input-placeholder {
+    color: black;
+  }
+
+  &:-moz-placeholder {
+    color: black;
+  }
+}

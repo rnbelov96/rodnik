@@ -8,7 +8,12 @@
 
   @media (max-width: 991px) {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 0px;
   }
 }
 
@@ -35,7 +40,7 @@
     content: url('/src/img/owner.png');
     position: absolute;
     right: -715px;
-    top: -200px;
+    top: -192px;
     z-index: -1;
 
     @media (max-width: 1150px) {
@@ -52,8 +57,16 @@
   font-size: 18px;
   margin-bottom: 20px;
 
-  &:nth-child(3) {
+  &:nth-child(2) {
     margin-bottom: 35px;
+
+    @media (max-width: 575px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    font-size: 14px;
   }
 }
 
@@ -62,12 +75,24 @@
   height: 1px;
   background-color: white;
   margin-bottom: 35px;
+
+  @media (max-width: 575px) {
+    margin-bottom: 20px;
+  }
 }
 
 .onwer__caption {
   @include max-width(395px);
   font-size: 18px;
   margin-bottom: 0;
+
+  @media (max-width: 991px) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
 }
 
 .owner__img {

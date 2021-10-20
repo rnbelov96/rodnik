@@ -1,14 +1,216 @@
-.calc__input {
-  width: 100%;
-  height: 10px;
+.calc {
+  padding-top: 83px;
+  padding-bottom: 220px;
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
+}
+
+.calc__title {
+  @media (max-width: 991px) {
+    margin-bottom: 50px;
+  }
+
+  @include title;
+  margin-bottom: 160px;
+
+  span {
+    color: $blue;
+  }
+
+  @media (max-width: 767px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.calc__content {
+  @include max-width(678px);
+  background-color: $blue;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 95px;
+  margin-left: auto;
+  position: relative;
+
+  @media (max-width: 991px) {
+    margin-right: auto;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 25px;
+    padding-bottom: 60px;
+  }
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/calc-photo.jpg');
+    z-index: -1;
+    left: -908px;
+    top: -100px;
+
+    @media (max-width: 1300px) {
+      left: -975px;
+    }
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: 'красота';
+    position: absolute;
+    height: 92px;
+    line-height: 92px;
+    color: #f4f0eb;
+    font-size: 125.2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    top: -96px;
+    left: 166px;
+
+    @media (max-width: 1300px) {
+      left: 100px;
+    }
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+}
+
+.calc__calc-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 50px;
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+}
+
+.calc__input-box {
+  margin-bottom: 50px;
+
+  @media (max-width: 575px) {
+    margin-bottom: 20px;
+  }
+}
+
+.calc__input-label {
+  font-size: 18px;
   margin-bottom: 7px;
+  color: white;
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+  }
+}
+
+.calc__endpoints {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc__endpoint {
+  width: 30px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  position: relative;
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
+}
+
+.calc__endpoint-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -17px;
+  background-color: white;
+
+  &_active {
+    background-color: #feed23;
+  }
+}
+
+.calc__result {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+
+  br {
+    display: none;
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  & > span {
+    margin-left: 20px;
+
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+  }
+
+  span {
+    font-size: 50px;
+
+    @media (max-width: 575px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.calc__input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 9px;
+  margin-bottom: 7px;
+  border-radius: 4px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   background: linear-gradient(
     to right,
-    black 0%,
-    black 50%,
+    #feed23 0%,
+    #feed23 50%,
     white 50%,
     white 100%
   );
@@ -19,13 +221,11 @@
   }
 
   &::-webkit-slider-thumb {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     -webkit-appearance: none;
     appearance: none;
-    @include bg;
-    background-image: url('/src/img/icons/thumb.png');
-    background-color: white;
+    background-color: #feed23;
     cursor: pointer;
     outline: none;
     border: none;
@@ -42,12 +242,11 @@
   }
 
   &::-moz-range-thumb {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     -moz-appearance: none;
     appearance: none;
-    @include bg;
-    background-image: url('/src/img/icons/thumb.png');
+    background-color: #feed23;
     cursor: pointer;
     outline: none;
     border: none;
@@ -64,11 +263,10 @@
   }
 
   &::-ms-thumb {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     appearance: none;
-    @include bg;
-    background-image: url('/src/img/icons/thumb.png');
+    background-color: #feed23;
     cursor: pointer;
     outline: none;
     border: none;

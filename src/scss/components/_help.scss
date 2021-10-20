@@ -1,0 +1,141 @@
+.help {
+  background-image: url('/src/img/bgs/help-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 95px;
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
+
+  @media (max-width: 575px) {
+    background-image: none;
+  }
+}
+
+.help__title {
+  @include title;
+  margin-bottom: 63px;
+  @include max-width(1005px);
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  span {
+    color: $blue;
+  }
+}
+
+.help__item {
+  @include max-width(317px);
+  margin-bottom: 85px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  &:nth-child(1) {
+    margin-left: auto;
+    margin-right: auto;
+
+    &::before {
+      content: url('/src/img/help-tablet.png');
+      position: absolute;
+      left: -447px;
+      top: 104px;
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    margin-left: auto;
+
+    @media (max-width: 767px) {
+      margin-right: auto;
+    }
+
+    &::before {
+      content: url('/src/img/help-chair.png');
+      position: absolute;
+      top: 55px;
+      left: -621px;
+      z-index: -1;
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+  }
+
+  &:last-child {
+    margin-right: auto;
+    position: relative;
+    top: -207px;
+    margin-bottom: -207px;
+
+    @media (max-width: 767px) {
+      margin-left: auto;
+      top: 0px;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: 'здоровье';
+      height: 118px;
+      line-height: 118px;
+      font-size: 120px;
+      color: #f4f0eb;
+      transform: rotateZ(270deg);
+      position: absolute;
+      top: -148px;
+      left: -408px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      @media (max-width: 1380px) {
+        content: none;
+      }
+    }
+  }
+}
+
+.help__item-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+
+  @media (max-width: 575px) {
+    width: 125px;
+  }
+}
+
+.help__item-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+  line-height: 28px;
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+  }
+}
+
+.help__item-text {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 22px;
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+  }
+}

@@ -1,16 +1,20 @@
 /* eslint-disable no-param-reassign */
 export {};
 
-const leftColor = '#FADE40';
+const leftColor = '#feed23';
 const rightColor = '#ffffff';
 
 const rangeElList = document.querySelectorAll('.js-range');
 
-const rentRange = document.querySelector('.js-rent-range') as HTMLInputElement;
-const trainingRange = document.querySelector(
-  '.js-training-range',
+const processRange = document.querySelector(
+  '.js-process-range',
 ) as HTMLInputElement;
-const roomRange = document.querySelector('.js-room-range') as HTMLInputElement;
+const checkinRange = document.querySelector(
+  '.js-checkin-range',
+) as HTMLInputElement;
+const workshopRange = document.querySelector(
+  '.js-workshop-range',
+) as HTMLInputElement;
 
 const resultLabelEl = document.querySelector(
   '.js-calc-result',
@@ -18,13 +22,25 @@ const resultLabelEl = document.querySelector(
 
 let result: number;
 
-let personCurrentStep = 2;
-let adultsCurrentStep = 2;
-let kidsCurrentStep = 2;
+let processCurrentStep = 3;
+let checkinCurrentStep = 3;
+let workshopCurrentStep = 3;
+
+const processEndpointElList = document.querySelectorAll(
+  '.js-process-endpoints .calc__endpoint-dot',
+);
+const checkinEndpointElList = document.querySelectorAll(
+  '.js-checkin-endpoints .calc__endpoint-dot',
+);
+const workshopEndpointElList = document.querySelectorAll(
+  '.js-workshop-endpoints .calc__endpoint-dot',
+);
 
 const calcResult = () => {
-  result = (Number(rentRange.value) * 4500 + Number(trainingRange.value) * 10500)
-    * Number(roomRange.value);
+  result = (Number(processRange.value) * 4500
+      + Number(checkinRange.value) * 10500
+      + Number(workshopRange.value) * 10500)
+    * 0.2;
   resultLabelEl.textContent = result.toLocaleString();
   return result;
 };
@@ -45,49 +61,85 @@ rangeElList.forEach(el => {
   )}%, ${rightColor} 100%)`;
 });
 
-rentRange.addEventListener('input', e => {
+processRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  personCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  const processPrevStep = processCurrentStep;
+
+  processCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  if (processPrevStep < processCurrentStep) {
+    processEndpointElList[processCurrentStep].classList.add(
+      'calc__endpoint-dot_active',
+    );
+  } else {
+    processEndpointElList[processPrevStep].classList.remove(
+      'calc__endpoint-dot_active',
+    );
+  }
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (personCurrentStep / steps) * 100,
+    (processCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (personCurrentStep / steps) * 100,
+    (processCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();
 });
 
-trainingRange.addEventListener('input', e => {
+checkinRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  adultsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  const checkinPrevStep = checkinCurrentStep;
+
+  checkinCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  if (checkinPrevStep < checkinCurrentStep) {
+    checkinEndpointElList[checkinCurrentStep].classList.add(
+      'calc__endpoint-dot_active',
+    );
+  } else {
+    checkinEndpointElList[checkinPrevStep].classList.remove(
+      'calc__endpoint-dot_active',
+    );
+  }
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (adultsCurrentStep / steps) * 100,
+    (checkinCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (adultsCurrentStep / steps) * 100,
+    (checkinCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();
 });
 
-roomRange.addEventListener('input', e => {
+workshopRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  kidsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  const workshopPrevStep = workshopCurrentStep;
+
+  workshopCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  if (workshopPrevStep < workshopCurrentStep) {
+    workshopEndpointElList[workshopCurrentStep].classList.add(
+      'calc__endpoint-dot_active',
+    );
+  } else {
+    workshopEndpointElList[workshopPrevStep].classList.remove(
+      'calc__endpoint-dot_active',
+    );
+  }
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (kidsCurrentStep / steps) * 100,
+    (workshopCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (kidsCurrentStep / steps) * 100,
+    (workshopCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();

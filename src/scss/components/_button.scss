@@ -119,6 +119,22 @@
       font-size: 23px;
     }
   }
+
+  &_calc {
+    position: absolute;
+    max-width: 413px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -45.5px;
+
+    button {
+      font-size: 26px;
+
+      @media (max-width: 575px) {
+        font-size: 22px;
+      }
+    }
+  }
 }
 
 .button__bg {

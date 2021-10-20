@@ -1,0 +1,22 @@
+.photos__title {
+  @include title;
+  @include max-width(1065px);
+  text-align: center;
+  margin-bottom: 58px;
+
+  span {
+    color: $blue;
+  }
+}
+
+.photos__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photos__img {
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}

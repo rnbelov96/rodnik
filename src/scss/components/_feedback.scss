@@ -1,0 +1,32 @@
+.feedback {
+  padding-top: 65px;
+  padding-bottom: 67px;
+  background-color: #040e1c;
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.feedback__policy {
+  margin-top: 28px;
+  font-size: 14px;
+  color: #f4f0eb;
+
+  @media (max-width: 991px) {
+    text-align: center;
+  }
+
+  button {
+    @include reset-btn;
+    color: #f4f0eb;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}

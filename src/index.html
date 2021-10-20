@@ -292,8 +292,9 @@
           </h2>
           <div class="owner__text-box">
             <p class="owner__text">
-              Добрый день! <br> Ежедневно наша команда работает, чтобы помочь тысячам
-              людей стать здоровее, красивее, а значит, счастливее.
+              Добрый день! <br />
+              Ежедневно наша команда работает, чтобы помочь тысячам людей стать
+              здоровее, красивее, а значит, счастливее.
             </p>
             <p class="owner__text">
               Сейчас мы ищем новых партнёров. Нам важно, чтобы каждый, кто решит
@@ -307,7 +308,310 @@
             <b>Римма Еникеева,</b> <br />
             основатель сети оздоравливающих центров «Родник здоровья и красоты»
           </p>
-          <img src="./img/owner.png" alt="Фото основателя" class="owner__img">
+          <img src="./img/owner.png" alt="Фото основателя" class="owner__img" />
+        </div>
+      </section>
+
+      <section class="calc">
+        <div class="container">
+          <h2 class="calc__title">
+            Калькулятор прибыли: <br />
+            <span>сколько вы сможете заработать</span>
+          </h2>
+          <div class="calc__content">
+            <p class="calc__calc-title">При продаже услуг:</p>
+            <div class="calc__input-box">
+              <p class="calc__input-label">Лечебные процедуры</p>
+              <input
+                type="range"
+                min="100"
+                max="600"
+                step="100"
+                class="calc__input js-range js-process-range"
+              />
+              <div class="calc__endpoints js-process-endpoints">
+                <div class="calc__endpoint visually-hidden">
+                  100
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  200
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  300
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  400
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  500
+                  <div class="calc__endpoint-dot"></div>
+                </div>
+                <div class="calc__endpoint visually-hidden">
+                  600
+                  <div class="calc__endpoint-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="calc__input-box">
+              <p class="calc__input-label">Заселения</p>
+              <input
+                type="range"
+                min="50"
+                max="300"
+                step="50"
+                class="calc__input js-range js-checkin-range"
+              />
+              <div class="calc__endpoints js-checkin-endpoints">
+                <div class="calc__endpoint visually-hidden">
+                  50
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  100
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  150
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  200
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  250
+                  <div class="calc__endpoint-dot"></div>
+                </div>
+                <div class="calc__endpoint visually-hidden">
+                  300
+                  <div class="calc__endpoint-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="calc__input-box">
+              <p class="calc__input-label">Мероприятия и семинары</p>
+              <input
+                type="range"
+                min="5"
+                max="30"
+                step="5"
+                class="calc__input js-range js-workshop-range"
+                class="calc__input"
+              />
+              <div class="calc__endpoints js-workshop-endpoints">
+                <div class="calc__endpoint visually-hidden">
+                  5
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  10
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  15
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  20
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  25
+                  <div class="calc__endpoint-dot"></div>
+                </div>
+                <div class="calc__endpoint visually-hidden">
+                  30
+                  <div class="calc__endpoint-dot"></div>
+                </div>
+              </div>
+            </div>
+            <p class="calc__result">
+              Прибыль за месяц: <br />
+              <span><span class="js-calc-result">268 800</span>&nbsp;₽</span>
+            </p>
+            <div class="button__wrapper button__wrapper_calc">
+              <button class="button">Зафиксировать прибыль</button>
+              <div class="button__bg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="photos">
+        <div class="container">
+          <h2 class="photos__title">
+            <span>60% гостей приезжают к нам от 2-х раз в год,</span> и вот
+            почему:
+          </h2>
+        </div>
+        <div class="photos__content">
+          <img
+            src="./img/gallery/photos/1.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/2.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/3.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/4.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/5.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/6.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/7.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/8.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/9.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/10.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/11.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          /><img
+            src="./img/gallery/photos/12.jpg"
+            alt="Фото центра"
+            class="photos__img"
+          />
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="container">
+          <form class="line-form line-form_feedback">
+            <h3 class="line-form__title">
+              <span>Ищем партнёров по всей России</span> <br />
+              Создайте спа-центр с 25 популярными услугами для отдыха,
+              профилактики и лечения
+            </h3>
+            <div class="line-form__content">
+              <div class="line-form__input-container">
+                <div class="line-form__input-box">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="имя"
+                    data-type="name"
+                    class="line-form__input"
+                  />
+                </div>
+                <div class="line-form__input-box">
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="телефон"
+                    data-type="phone"
+                    class="line-form__input"
+                  />
+                </div>
+                <div class="line-form__input-box">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="e-mail"
+                    data-type="email"
+                    class="line-form__input"
+                  />
+                </div>
+              </div>
+              <div class="button__wrapper">
+                <button type="submit" class="button button_line-form">
+                  Получить материалы
+                </button>
+                <div class="button__bg"></div>
+              </div>
+            </div>
+          </form>
+          <p class="feedback__policy">
+            Я подтверждаю, что ознакомлен и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <button class="js-policy">политикой конфиденциальности</button>
+          </p>
+        </div>
+      </section>
+
+      <section class="help">
+        <div class="container">
+          <h2 class="help__title">
+            <span>Экспертные инструкции</span> и сопровождение по 10+
+            направлениям
+          </h2>
+          <div class="help__list">
+            <div class="help__item">
+              <img src="./img/icons/help/1.png" class="help__item-icon" />
+              <p class="help__item-title">Помощь <br> в выборе места</p>
+              <p class="help__item-text">
+                Вместе найдём перспективное помещение, удобное гостям и
+                соответствующее стандартам «Родника здоровья и красоты» по чистоте
+                воздуха и красоте пейзажей
+              </p>
+            </div>
+            <div class="help__item">
+              <img src="./img/icons/help/2.png" class="help__item-icon" />
+              <p class="help__item-title">Закупка <br> оборудования</p>
+              <p class="help__item-text">
+                Поделимся контактами производителей и дистрибьюторов техники и
+                аппаратов для вашего спа
+              </p>
+            </div>
+            <div class="help__item">
+              <img src="./img/icons/help/3.png" class="help__item-icon" />
+              <p class="help__item-title">Разработка прейскуранта</p>
+              <p class="help__item-text">
+                Проанализируем рынок и выясним, какие оздоровительные процедуры
+                наиболее перспективны в вашем городе
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -64,7 +64,7 @@
 
   @for $i from 1 through 4 {
     &:nth-child(#{$i}) .partner__item-text::before {
-      content: url('/src/img/icons/partner/#{$i}.png')
+      content: url('/src/img/icons/partner/#{$i}.svg')
     }
   }
 }
@@ -85,5 +85,7 @@
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
+    width: 90px;
+    height: 90px;
   }
 }

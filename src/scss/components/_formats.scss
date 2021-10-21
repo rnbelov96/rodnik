@@ -116,11 +116,13 @@
   }
 
   &::before {
-    content: url('/src/img/icons/check.png');
+    content: url('/src/img/icons/check.svg');
     position: absolute;
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
+    width: 25px;
+    height: 26px;
   }
 }
 

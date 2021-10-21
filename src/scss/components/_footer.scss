@@ -90,11 +90,11 @@
   @include bg;
 
   &:nth-child(1) {
-    background-image: url('/src/img/icons/vk.jpg');
+    background-image: url('/src/img/icons/vk.svg');
   }
 
   &:nth-child(2) {
-    background-image: url('/src/img/icons/insta.jpg');
+    background-image: url('/src/img/icons/insta.svg');
   }
 }
 
@@ -118,7 +118,9 @@
 
   &::before {
     position: absolute;
-    content: url('/src/img/icons/footer-phone.png');
+    content: url('/src/img/icons/phone.svg');
+    width: 41px;
+    height: 41px;
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
@@ -135,7 +137,9 @@
     font-size: 28px;
   }
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     color: white;
     text-decoration: underline;
   }
@@ -162,7 +166,9 @@
   font-size: 18px;
 
   &::before {
-    content: url('/src/img/icons/f5.png');
+    content: url('/src/img/icons/f5.svg');
+    width: 43px;
+    height: 40px;
     left: 0px;
     top: 50%;
     transform: translateY(-50%);

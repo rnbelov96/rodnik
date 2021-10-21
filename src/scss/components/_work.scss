@@ -132,11 +132,13 @@
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
   }
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i})::before {
-      content: url('/src/img/icons/form/#{$i}.png');
+      content: url('/src/img/icons/form/#{$i}.svg');
     }
   }
 }

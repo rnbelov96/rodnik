@@ -152,11 +152,13 @@
   }
 
   &::before {
-    content: url('/src/img/icons/thanks-clock.png');
+    content: url('/src/img/icons/thanks-clock.svg');
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 0px;
+    width: 63px;
+    height: 63px;
 
     @media (max-width: 730px) {
       content: none;

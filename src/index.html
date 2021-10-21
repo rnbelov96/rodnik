@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Франшиза «»</title>
+    <title>Франшиза Родник красоты и здоровья</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
       integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
@@ -29,7 +29,7 @@
               />
               <div class="header__contact-box">
                 <a href="tel:+" class="header__phone">8 (800) 230-23-23</a
-                ><button class="header__callback">заказать звонок</button>
+                ><button class="header__callback js-callback">заказать звонок</button>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@
           </ul>
 
           <div class="button__wrapper button__wrapper_desc">
-            <button type="submit" class="button button_line-form js-callback">
+            <button type="submit" class="button button_line-form js-present">
               Получить материалы
             </button>
             <div class="button__bg"></div>
@@ -139,7 +139,7 @@
             <img
               src="./img/gains-preview.jpg"
               alt="Превью видео"
-              class="gains__preview-img"
+              class="gains__preview-img js-youtube-adv"
             />
             <div class="gains__preview-bg"></div>
           </div>
@@ -246,7 +246,7 @@
                 </li>
               </ul>
               <div class="button__wrapper button__wrapper_formats">
-                <button class="button">Узнать о формате подробнее</button>
+                <button class="button js-format">Узнать о формате подробнее</button>
                 <div class="button__bg"></div>
               </div>
             </li>
@@ -271,7 +271,7 @@
                 </li>
               </ul>
               <div class="button__wrapper button__wrapper_formats">
-                <button class="button">Узнать о формате подробнее</button>
+                <button class="button js-format">Узнать о формате подробнее</button>
                 <div class="button__bg"></div>
               </div>
             </li>
@@ -458,7 +458,7 @@
               <span><span class="js-calc-result">268 800</span>&nbsp;₽</span>
             </p>
             <div class="button__wrapper button__wrapper_calc">
-              <button class="button">Зафиксировать прибыль</button>
+              <button class="button js-fix">Зафиксировать прибыль</button>
               <div class="button__bg"></div>
             </div>
           </div>
@@ -837,7 +837,7 @@
                 </p>
                 <p class="options__item-text">Окупаемость: <b>5 месяцев</b></p>
                 <div class="button__wrapper button__wrapper_options">
-                  <button type="submit" class="button">
+                  <button type="submit" class="button js-fin">
                     Получить финансовую модель
                   </button>
                   <div class="button__bg"></div>
@@ -888,7 +888,7 @@
                 </p>
                 <p class="options__item-text">Окупаемость: <b>4 месяца</b></p>
                 <div class="button__wrapper button__wrapper_options">
-                  <button type="submit" class="button">
+                  <button type="submit" class="button js-fin">
                     Получить финансовую модель
                   </button>
                   <div class="button__bg"></div>
@@ -1022,13 +1022,45 @@
 
     <div class="modal">
       <div class="modal__center-wrapper">
-        <form class="modal-form">
+        <form class="modal-form modal-form_modal">
           <h3 class="modal-form__title">
-            Оставьте заявку <span class="js-modal-form-title"></span>
+            <span class="js-modal-form-title"></span>
           </h3>
-          <button class="button button_modal-form js-modal-form-btn">
-            Получить документацию
-          </button>
+          <div class="modal-form__input-container">
+            <div class="modal-form__input-box">
+              <input
+                type="text"
+                name="name"
+                placeholder="имя"
+                data-type="name"
+                class="modal-form__input"
+              />
+            </div>
+            <div class="modal-form__input-box">
+              <input
+                type="text"
+                name="phone"
+                placeholder="телефон"
+                data-type="phone"
+                class="modal-form__input"
+              />
+            </div>
+            <div class="modal-form__input-box">
+              <input
+                type="email"
+                name="email"
+                placeholder="e-mail"
+                data-type="email"
+                class="modal-form__input"
+              />
+            </div>
+          </div>
+          <div class="button__wrapper button__wrapper_modal-form">
+            <button type="submit" class="button js-modal-form-btn">
+              Проверить город
+            </button>
+            <div class="button__bg"></div>
+          </div>
           <button
             data-modal-close=""
             class="modal__close"
@@ -1059,7 +1091,7 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «».
+            Оператор может получить о посетителях веб-сайта компании «Родник красоты и здоровья».
           </li>
         </ol>
 
@@ -1185,7 +1217,7 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом hotchicken18@yandex.ru с пометкой «Отказ
+            электронной почты с доменом example@mail.ru с пометкой «Отказ
             от уведомлений о новых продуктах и услугах и специальных
             предложениях».
           </li>
@@ -1295,18 +1327,8 @@
         ></button>
       </div>
     </div>
-    <!-- <div class="modal modal_video js-video-adv">
-      <div class="modal__center-wrapper">
-        <iframe
-          width="560"
-          height="315"
-          class="modal__video"
-          src="https://www.youtube.com/embed/p7-GpwMAnck"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div> -->
+    <div class="modal modal_video js-video-adv">
+      <div class="modal__center-wrapper"></div>
+    </div>
   </body>
 </html>

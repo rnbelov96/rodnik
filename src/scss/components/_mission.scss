@@ -32,6 +32,10 @@
   margin-bottom: 0;
   font-family: 'FiraSans';
   font-weight: 400;
+
+  @media (max-width: 650px) {
+    font-size: 35px;
+  }
 }
 
 .mission__title {
@@ -50,8 +54,8 @@
     @media (max-width: 767px) {
       font-size: 45px;
     }
-  
-    @media (max-width: 575px) {
+
+    @media (max-width: 650px) {
       font-size: 30px;
     }
   }

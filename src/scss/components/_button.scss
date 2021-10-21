@@ -20,7 +20,7 @@
   z-index: 1;
   text-shadow: 1.3px 2.6px 3px #000;
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 22px;
   }
 
@@ -101,7 +101,7 @@
 
   &_desc {
     display: none;
-    @media (max-width: 575px) {
+    @media (max-width: 650px) {
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -130,7 +130,7 @@
     button {
       font-size: 26px;
 
-      @media (max-width: 575px) {
+      @media (max-width: 650px) {
         font-size: 22px;
       }
     }
@@ -146,7 +146,7 @@
     button {
       font-size: 26px;
 
-      @media (max-width: 575px) {
+      @media (max-width: 650px) {
         font-size: 22px;
       }
     }
@@ -162,7 +162,7 @@
     button {
       font-size: 20px;
 
-      @media (max-width: 575px) {
+      @media (max-width: 650px) {
         font-size: 20px;
       }
     }
@@ -178,7 +178,7 @@
     button {
       font-size: 20px;
 
-      @media (max-width: 575px) {
+      @media (max-width: 650px) {
         font-size: 20px;
       }
     }

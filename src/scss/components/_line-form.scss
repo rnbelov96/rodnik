@@ -1,6 +1,6 @@
 .line-form {
   &_desc {
-    @media (max-width: 575px) {
+    @media (max-width: 650px) {
       display: none;
     }
   }
@@ -10,7 +10,7 @@
       margin-bottom: 30px;
       font-weight: normal;
 
-      @media (max-width: 575px) {
+      @media (max-width: 650px) {
         font-size: 20px;
       }
 
@@ -32,7 +32,7 @@
     text-align: center;
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 20px;
   }
 }

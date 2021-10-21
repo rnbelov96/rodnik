@@ -22,8 +22,8 @@
   font-weight: bold;
   margin-bottom: 10px;
 
-  @media (max-width: 575px) {
-    font-size: 17px;
+  @media (max-width: 650px) {
+    font-size: 16px;
   }
 }
 
@@ -133,8 +133,8 @@
   text-align: center;
   color: white;
 
-  @media (max-width: 575px) {
-    font-size: 28px;
+  @media (max-width: 650px) {
+    font-size: 26px;
   }
 
   &:hover,
@@ -164,6 +164,10 @@
   text-decoration: underline;
   text-align: center;
   font-size: 18px;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 
   &::before {
     content: url('/src/img/icons/f5.svg');

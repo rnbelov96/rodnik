@@ -39,7 +39,7 @@
     font-size: 20px;
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 16px;
     margin-bottom: 20px;
   }
@@ -100,6 +100,10 @@
   @media (max-width: 1150px) {
     margin-bottom: 20px;
   }
+
+  @media (max-width: 650px) {
+    margin-bottom: 25px;
+  }
 }
 
 .gains__item-img {
@@ -114,6 +118,11 @@
   font-size: 18px;
   margin-bottom: 0;
   position: relative;
+
+  @media (max-width: 650px) {
+    padding-top: 20px;
+    font-size: 16px;
+  }
 
   &::before {
     width: 139px;

@@ -50,7 +50,7 @@
     padding-right: 30px;
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 25px;
@@ -101,7 +101,7 @@
   color: white;
   margin-bottom: 50px;
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 20px;
     margin-bottom: 25px;
   }
@@ -110,7 +110,7 @@
 .calc__input-box {
   margin-bottom: 50px;
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     margin-bottom: 20px;
   }
 }
@@ -120,7 +120,7 @@
   margin-bottom: 7px;
   color: white;
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 16px;
   }
 }
@@ -137,7 +137,7 @@
   color: white;
   position: relative;
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 14px;
   }
 }
@@ -168,7 +168,7 @@
     text-align: center;
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 18px;
   }
 
@@ -191,7 +191,7 @@
   span {
     font-size: 50px;
 
-    @media (max-width: 575px) {
+    @media (max-width: 650px) {
       font-size: 30px;
     }
   }

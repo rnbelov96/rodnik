@@ -60,12 +60,12 @@
   &:nth-child(2) {
     margin-bottom: 35px;
 
-    @media (max-width: 575px) {
+    @media (max-width: 650px) {
       margin-bottom: 20px;
     }
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 14px;
   }
 }
@@ -76,7 +76,7 @@
   background-color: white;
   margin-bottom: 35px;
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     margin-bottom: 20px;
   }
 }
@@ -90,7 +90,7 @@
     margin-bottom: 20px;
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 14px;
   }
 }

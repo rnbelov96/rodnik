@@ -3,7 +3,7 @@
   padding-bottom: 78px;
 
   @media (max-width: 991px) {
-    padding-top: 50px;
+    padding-top: 75px;
     padding-bottom: 50px;
   }
 
@@ -31,7 +31,7 @@
   font-size: 24px;
   margin-bottom: 45px;
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 16px;
     margin-bottom: 30px;
   }
@@ -64,7 +64,7 @@
 
   @for $i from 1 through 4 {
     &:nth-child(#{$i}) .partner__item-text::before {
-      content: url('/src/img/icons/partner/#{$i}.svg')
+      content: url('/src/img/icons/partner/#{$i}.svg');
     }
   }
 }
@@ -76,7 +76,7 @@
   color: white;
   position: relative;
 
-  @media (max-width: 575px) {
+  @media (max-width: 650px) {
     font-size: 16px;
   }
 

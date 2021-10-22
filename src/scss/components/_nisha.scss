@@ -48,5 +48,9 @@
     position: absolute;
     right: -720px;
     bottom: -260px;
+
+    @media (max-width: 767px) {
+      content: none;
+    }
   }
 }

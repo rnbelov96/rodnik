@@ -173,3 +173,16 @@
     color: #808080;
   }
 }
+
+.work__owner-img {
+  display: none;
+  
+  @media (max-width: 1150px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 540px;
+    width: 100%;
+    margin-top: 60px;
+  }
+}

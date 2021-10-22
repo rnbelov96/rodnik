@@ -21,7 +21,8 @@
   text-shadow: 1.3px 2.6px 3px #000;
 
   @media (max-width: 650px) {
-    font-size: 22px;
+    font-size: 17px;
+    min-height: 55px;
   }
 
   &:hover {
@@ -117,6 +118,10 @@
 
     button {
       font-size: 23px;
+
+      @media (max-width: 650px) {
+        font-size: 17px;
+      }
     }
   }
 
@@ -131,7 +136,7 @@
       font-size: 26px;
 
       @media (max-width: 650px) {
-        font-size: 22px;
+        font-size: 17px;
       }
     }
   }
@@ -147,7 +152,7 @@
       font-size: 26px;
 
       @media (max-width: 650px) {
-        font-size: 22px;
+        font-size: 17px;
       }
     }
   }
@@ -163,7 +168,7 @@
       font-size: 20px;
 
       @media (max-width: 650px) {
-        font-size: 20px;
+        font-size: 17px;
       }
     }
   }
@@ -179,7 +184,7 @@
       font-size: 20px;
 
       @media (max-width: 650px) {
-        font-size: 20px;
+        font-size: 17px;
       }
     }
   }

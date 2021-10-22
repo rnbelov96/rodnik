@@ -6,6 +6,10 @@
   @media (max-width: 767px) {
     width: 222px;
   }
+
+  @media (max-width: 650px) {
+    width: 154px;
+  }
 }
 
 .header__content {
@@ -15,7 +19,6 @@
   align-items: center;
 
   @media (max-width: 650px) {
-    flex-direction: column;
     gap: 15px;
   }
 }
@@ -54,7 +57,7 @@
   margin-bottom: 3px;
 
   @media (max-width: 650px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   &:hover,

@@ -112,8 +112,20 @@
   align-items: center;
   margin-bottom: 35px;
 
+  &:hover::before {
+    transform: rotate(15deg) translateY(-50%);
+  }
+
+  &_thanks {
+    margin-bottom: 0;
+  }
+
   @media (max-width: 900px) {
     margin-bottom: 15px;
+
+    &_thanks {
+      margin-bottom: 0;
+    }
   }
 
   &::before {
@@ -124,6 +136,7 @@
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
+    transition: 0.3s;
   }
 }
 

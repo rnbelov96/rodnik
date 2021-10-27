@@ -25,11 +25,18 @@
   }
 }
 
-.thanks__header-logo {
+.thanks__header-link {
   display: block;
   margin-left: auto;
   margin-right: auto;
   @include max-width(506px);
+} 
+
+.thanks__header-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .thanks {
